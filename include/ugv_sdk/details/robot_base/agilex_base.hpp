@@ -249,7 +249,7 @@ class AgilexBase : public RobotCommonInterface {
   void ParseCANFrame(can_frame *rx_frame) {
     AgxMessage status_msg;
 
-    if (parser_.DecodeMessage(rx_frame, &status_msg)) {
+    if (parser_.DecodeMessage(rx_frame, &status_msg)) {    //parser_ is protocol_v2_parser Type
       UpdateRobotCoreState(status_msg);
       UpdateActuatorState(status_msg);
       UpdateCommonSensorState(status_msg);
