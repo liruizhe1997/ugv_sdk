@@ -55,12 +55,12 @@ void HunterRobot::ReleaseBrake() {
 }
 
 HunterCoreState HunterRobot::GetRobotState() {
-  auto hunter = dynamic_cast<HunterInterface*>(robot_);
+  auto hunter = dynamic_cast<HunterInterface*>(robot_); //robot_ is hunter_base type
   return hunter->GetRobotState();
 }
 
 HunterActuatorState HunterRobot::GetActuatorState() {
-  auto hunter = dynamic_cast<HunterInterface*>(robot_);
+  auto hunter = dynamic_cast<HunterInterface*>(robot_); 
   return hunter->GetActuatorState();
 }
 }  // namespace westonrobot
